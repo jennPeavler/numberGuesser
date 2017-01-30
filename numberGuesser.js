@@ -8,7 +8,10 @@ function getGuess() {
   var targetValue = 25; //Math.floor(Math.random()*100) +1;  Generate random value between 1-100
   var userGuess = document.getElementById("userGuess").value;
   var userGuessNum = parseInt(userGuess);
-  alert(typeof userGuessNum + " " + userGuessNum);
+  //alert(typeof userGuessNum + " " + userGuessNum);
+
+  var minRange = 0;
+  var maxRange = 100;
 
   var lastGuessMessage = document.getElementById("lastGuessMessage"); //Display gameResults upon click of guess button
   lastGuessMessage.textContent = "Your last guess was";
@@ -16,7 +19,14 @@ function getGuess() {
   userGuessValue.textContent = userGuess;
 
   //Determine what gameResponse displays with gameResults
-  if (userGuessNum == targetValue){
+  //!!!! Still need to fix for case that starts with a number (25day) for example
+
+  if (userGuessNum < minRange || userGuessNum > maxRange) {
+    var gameResponse = document.getElementById("gameResponse");
+    gameResponse.textContent = "Your number is out of range"
+  }
+
+  else if (userGuessNum == targetValue){
     var gameResponse = document.getElementById("gameResponse");
     gameResponse.textContent = "BOOM!";
   }
