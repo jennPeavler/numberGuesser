@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+<title>numberGuesser</title>
+<link rel ="stylesheet" href="numberGuesser.css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+<section id="wrapper">
+  <header>
+    <h1><span id="number">Number</span> Guesser</h1>
+  </header>
+
+  <main>
+    <section id="mainGame">
+      <input type="text" id="userGuess" placeholder="Enter your Guess" />
+      <button id="guessButton" class="submitButtons">Guess</button>
+      <button id="clearButton" class="submitButtons">Clear</button>
+    </section>
+
+    <section id="gameResults">
+      <p id="lastGuessMessage"></p>
+      <p id="userGuessValue"></p> <!--This value is a filler value, will be replaced with js-->
+      <p id="gameResponse"></p>  <!--This value is a filler value, will be replaced with js-->
+    </section>
+  </main>
+
+  <footer>
+    <button id="resetButton">Reset</button>
+
+  </footer>
+</section>
+
+<script type="text/Javascript" src="numberGuesser.js"></script>
+
+</body>
+</html>
