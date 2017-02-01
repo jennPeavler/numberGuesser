@@ -5,6 +5,7 @@ body {
   padding: 0;
   background: #F5F5F5;
   /*font-weight: 700;*/
+  letter-spacing: 1px;
 
 }
 #wrapper {
@@ -33,7 +34,6 @@ h1 {
   vertical-align: middle;
   color: #E6E7E8;
   font-size: 48px;
-  letter-spacing: 1px;
   font-weight: 100;
 }
 
@@ -46,8 +46,19 @@ main {
   width: 420px;
   height: 100%;
   margin-left: auto; margin-right: auto;
-
 }
+
+#minRange, #maxRange {
+  font-size: 26px;
+  color: #7D7D7D;
+  display: block;
+  width: 414px;
+}
+
+
+
+
+
 #userGuess {
   width: 414px;
   margin-top: 50px; margin-bottom: 50px;
@@ -55,6 +66,7 @@ main {
   font-size: 26px;
   font-weight: 200;
 }
+
 
 #guessButton {
   margin-right: 40px;
@@ -69,15 +81,15 @@ main {
   height: 40px;
   font-size: 26px;
   font-weight: 200;
-  letter-spacing: 1px;
+  margin-top: -20px;
+
 }
 
 #gameResults {
   margin-top: 90px; margin-bottom: 50px;
-  border: none;
+  border: solid 2px #D0D2D3;
   height: 422px;
   width: 416px;
-
 }
 
 #userGuessValue {
@@ -105,6 +117,7 @@ p {
   width: 420px;
   height: 38px;
   margin-bottom: 50px;
+  margin-top: -10px;
   font-size: 26px;
   font-weight: 200;
   letter-spacing: 1px;

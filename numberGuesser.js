@@ -1,19 +1,32 @@
-//PART1-Code for section#mainGame & section#gameResults button#guessButton
+//PART1-Code for section#defineRange form#rangeForm
+//This part of code executes when the user enters values in the number input Lower Range and Upper Range and clicks the Submit Range button
+//the range values get passed to the getGuess function described in PART2-Code
+
+
+//PART2-Code for section#mainGame & section#gameResults button#guessButton
   //This part of the code executes when the user clicks the guess button (#guessButton)
   //When the guess button is clicked, this code reads the users guess from the input
   //text field and returns an appropriate response with regards to the relation of the guess to the target value
 
 function getGuess() {
+  //Getting user input for the valid range in which to guess
+  var minRangeString = document.getElementById("minRange").value;
+  var maxRangeString = document.getElementById("maxRange").value;
+  var minRange = parseInt(minRangeString);
+  var maxRange = parseInt(maxRangeString);
+  alert(typeof minRange + minRange +  " " + typeof maxRange + maxRange);
 
-  var targetValue = 25; //Math.floor(Math.random()*100) +1;  Generate random value between 1-100
+  //Generate random number within minRange < n < maxRange.  Get user guess and parse into integer.
+  var targetValue = 25; //Math.floor(Math.random()*100) +1;
   var userGuess = document.getElementById("userGuess").value;
   var userGuessNum = parseInt(userGuess);
   //alert(typeof userGuessNum + " " + userGuessNum);
 
-  var minRange = 0;
-  var maxRange = 100;
+  //var minRange = 0;
+  //var maxRange = 100;
 
-  var lastGuessMessage = document.getElementById("lastGuessMessage"); //Display gameResults upon click of guess button
+  //Display gameResults upon click of guess button
+  var lastGuessMessage = document.getElementById("lastGuessMessage");
   lastGuessMessage.textContent = "Your last guess was";
   var userGuessValue = document.getElementById("userGuessValue");
   userGuessValue.textContent = userGuess;
@@ -50,7 +63,7 @@ function getGuess() {
 var guessButton = document.getElementById("guessButton");
 guessButton.onclick = getGuess;
 
-//PART2-Code for (#section#mainGame & section#gameResults) button#clearButton
+//PART3-Code for (#section#mainGame & section#gameResults) button#clearButton
 //This part of the code executes when user clicks the clear button (#clearButton)
 //When clear button is clicked, any text that the user has typed in the text input #userGuess disappears and
 //returns to the placeholder value
@@ -62,7 +75,7 @@ function clearText() {
 var clearButton = document.getElementById("clearButton");
 clearButton.onclick = clearText;
 
-//PART3-Code for footer button#resetButton
+//PART4-Code for footer button#resetButton
 //This part of the code executes when user clicks the reset button (#resetButton)
 //When reset button is clicked, game resets to default layout (beginning layout)
 
