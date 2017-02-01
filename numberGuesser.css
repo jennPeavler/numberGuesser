@@ -72,7 +72,7 @@ main {
   margin-right: 40px;
 }
 .submitButtons {
-  background: #D0D2D3;
+  /*background: #D0D2D3;*/
   color: #FFFFFF;
   width: 190px;
   float: left;
@@ -108,7 +108,7 @@ p {
 
 #resetButton {
   display: block;
-  background: #D0D2D3;
+  /*background: #D0D2D3;*/
   color: #FFFFFF;
   margin-left: auto;
   margin-right: auto;
@@ -123,12 +123,18 @@ p {
   letter-spacing: 1px;
 }
 
-button:hover {
+#guessButton:hover, #clearButton:hover, #resetButton:hover {
   background: #EB008B;
 }
 
-#resetButton:hover {
-  background: #EB008B;
+
+
+#guessButton, #clearButton, #resetButton :disabled {
+  background: #D0D2D3;
+}
+
+#guessButton, #clearButton, #resetButton :enabled {
+  background: #929497;
 }
 /*
 button:enabled {
@@ -148,10 +154,6 @@ button:disabled {
 }
 */
 
-button:focus {
-  outline: dotted 0.5px #EB008B;
-}
-
-input:focus {
+input:focus, button:focus {
   outline: dotted 0.5px #EB008B;
 }
