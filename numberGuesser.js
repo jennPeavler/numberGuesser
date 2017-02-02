@@ -64,6 +64,9 @@ function getGuess() {
     var gameResponse = document.getElementById("gameResponse");
     gameResponse.textContent = "Not a valid number or you did not enter a guessing range";
   }
+  document.getElementById("guessButton").classList.remove('enableClass');
+  document.getElementById("clearButton").classList.remove('enableClass');
+
 }
 
 
@@ -77,6 +80,8 @@ guessButton.onclick = getGuess;
 
 function clearText() {
   document.getElementById("userGuess").value = '';
+  document.getElementById("guessButton").classList.remove('enableClass');
+  document.getElementById("clearButton").classList.remove('enableClass');
 }
 
 var clearButton = document.getElementById("clearButton");
@@ -93,6 +98,8 @@ function resetGame() {
   document.getElementById("lastGuessMessage").textContent = '';
   document.getElementById("userGuessValue").textContent = '';
   document.getElementById("gameResponse").textContent = '';
+  document.getElementById("guessButton").classList.remove('enableClass');
+  document.getElementById("clearButton").classList.remove('enableClass');
 }
 
 var resetButton = document.getElementById("resetButton");
@@ -101,6 +108,7 @@ resetButton.onclick = resetGame;
 
 
 //PART 4 - enabling buttons
+
  document.getElementById("userGuess").addEventListener('keyup', function() {
      document.getElementById("guessButton").classList.add('enableClass');
      document.getElementById("clearButton").classList.add('enableClass');

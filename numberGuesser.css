@@ -27,7 +27,7 @@ h1 {
   vertical-align: middle;
   color: #E6E7E8;
   font-size: 48px;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 #number {
@@ -43,7 +43,7 @@ main {
 
 #defineRange, #instructions {
   font-size: 26px;
-  font-weight: 100;
+  font-weight: 300;
   color: #929497;
   text-align: center;
 }
@@ -58,7 +58,7 @@ main {
   width: 420px;
   height: 38px;
   font-size: 26px;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 1px;
   background: #D0D2D3;
   margin-top: 20px;
@@ -68,7 +68,7 @@ main {
   display: inline-block;
   width: 150px;
   height: 150px;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 26px;
   text-align: center;
   border: solid 2px #ED458B;
@@ -79,7 +79,7 @@ main {
   margin-top: 50px; margin-bottom: 50px;
   height: 40px;
   font-size: 26px;
-  font-weight: 200;
+  font-weight: 300;
   border: solid 2px #929497;
 }
 
@@ -96,7 +96,7 @@ main {
   border-radius: 20px;
   height: 40px;
   font-size: 26px;
-  font-weight: 200;
+  font-weight: 300;
   margin-top: -20px;
 
 }
@@ -109,14 +109,14 @@ main {
   width: 416px;
   font-size: 30px;
   text-align: center;
-  font-weight: 100;
-  color: #7D7D7D;
+  font-weight: 300;
+  color: #929497;
 }
 
 #userGuessValue {
   font-size: 160px;
   color: #ED458B;
-  font-weight: 10;
+  font-weight: 300;
   margin: 0;
 }
 
@@ -134,7 +134,7 @@ main {
   margin-bottom: 50px;
   margin-top: -10px;
   font-size: 26px;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 1px;
   background: #D0D2D3;
 }
