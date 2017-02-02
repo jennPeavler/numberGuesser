@@ -143,13 +143,14 @@ main {
   background: #EB008B;
 }
 
-/*#guessButton, #clearButton, #resetButton :disabled {
+/*#guessButton:disabled, #clearButton:disabled, #resetButton:disabled {
   background: #D0D2D3;
-}
-*/
+}*/
+
 /*#guessButton, #clearButton, #resetButton :enabled {
   background: #929497;
 }*/
+
 .enableClass {
   background: #929497;
 }
