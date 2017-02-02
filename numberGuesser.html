@@ -14,25 +14,25 @@
   </header>
 
   <main>
-    <section id="instructions">
-      <button id="instructionButton">Get Instructions</button>
+    <section id="instructions" aria-label="Insturction section">
+      <button id="instructionButton" aria-label="Get Instruction Button">Get Instructions</button>
       <p id="instruction1"></p>
       <p id="instruction2"></p>
       <p id="instruction3"></p>
     </section>
 
-    <section id="defineRange">
-      <input type="number" class="rangeButtons" id="minRange" placeholder="MIN" />
-      <input type="number" class="rangeButtons" id="maxRange" placeholder="MAX" />
+    <section id="defineRange" aria-label="User input area">
+      <input type="number" class="rangeButtons" id="minRange" placeholder="MIN" aria-label="input minimum range" />
+      <input type="number" class="rangeButtons" id="maxRange" placeholder="MAX" aria-label="input maximum range"/>
     </section>
 
     <section id="mainGame">
-      <input type="number" id="userGuess" placeholder="Enter your guess" />
+      <input type="number" id="userGuess" placeholder="Enter your guess" aria-label="input guess" />
       <button id="guessButton" class="submitButtons">Guess</button>
       <button id="clearButton" class="submitButtons">Clear</button>
     </section>
 
-    <section class="gameResults">
+    <section class="gameResults" aria-label="game results">
       <p id="lastGuessMessage"></p>
       <p id="userGuessValue"></p>
       <p id="gameResponse"></p>
@@ -40,7 +40,7 @@
   </main>
 
   <footer>
-    <button id="resetButton">Reset</button>
+    <button id="resetButton" aria-label="reset game button">Reset</button>
 
   </footer>
 </section>
