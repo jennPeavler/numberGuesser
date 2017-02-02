@@ -62,7 +62,7 @@ function getGuess() {
 
   else {
     var gameResponse = document.getElementById("gameResponse");
-    gameResponse.textContent = "But you did not enter a guessing range";
+    gameResponse.textContent = "Not a valid number or you did not enter a guessing range";
   }
 }
 
@@ -101,10 +101,27 @@ resetButton.onclick = resetGame;
 
 
 //PART 4 - enabling buttons
+ document.getElementById("userGuess").addEventListener('keyup', function() {
+     document.getElementById("guessButton").classList.add('enableClass');
+     document.getElementById("clearButton").classList.add('enableClass');
+ });
 
 
-document.getElementById("userGuess").addEventListener('keyup', function() {
-    document.getElementById("guessButton").classList.add('enableClass');
-    document.getElementById("clearButton").classList.add('enableClass');
+//PART 5 - Code for instruction button
 
-});
+function getInstructions() {
+  if (document.getElementById("instructionButton").innerText == "Get Instructions") {
+    document.getElementById("instruction1").innerText = "Enter a minimum and maximum value and a random number will be generated within that range";
+    document.getElementById("instruction2").innerText = "The random number will be the minimum value, the maximum value or any whole number in between";
+    document.getElementById("instruction3").innerText = "If you guess the random number correctly, the range will automatically increase";
+    //document.getElementById("instructionButton").innerText = "Close Instructions";
+  }
+  // if (document.getElementById("instructionButton").innerText == "Close Instructions") {
+  //     document.getElementById("instruction1").innerText = "";
+  //     document.getElementById("instruction2").innerText = "";
+  //     document.getElementById("instruction3").innerText = "";
+  //     document.getElementById("instructionButton").innerText = "Get Instructions";
+  // }
+}
+
+document.getElementById("instructionButton").onclick = getInstructions;
