@@ -17,7 +17,7 @@ function getGuess() {
   //alert(typeof minRange + minRange +  " " + typeof maxRange + maxRange);
 
   //Generate random number within minRange < n < maxRange.  Get user guess and parse into integer.
-  var targetValue = 10//Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
+  var targetValue = Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
   //alert(targetValue);
   var userGuess = document.getElementById("userGuess").value;
   var userGuessNum = parseInt(userGuess);

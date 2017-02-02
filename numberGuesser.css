@@ -41,19 +41,21 @@ main {
   margin-left: auto; margin-right: auto;
 }
 
-#defineRange {
+#defineRange, #instructions {
   font-size: 26px;
   font-weight: 100;
   color: #929497;
   text-align: center;
 
 }
-#minRange, #maxRange {
-  display: block;
-  width: 414px;
+.rangeButtons {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
   font-weight: 100;
   font-size: 26px;
-  border: solid 2px #929497;
+  text-align: center;
+  border: solid 2px #ED458B;
 }
 
 #userGuess {
@@ -138,4 +140,19 @@ main {
 
 input:focus, button:focus {
   outline: dotted 0.5px #EB008B;
+}
+
+@media screen and (max-width: 550px) {
+    .submitButtons {
+        display: block;
+        width: 414px;
+    }
+
+    #clearButton {
+      margin-top: 20px;
+    }
+
+    .gameResults {
+      margin-top: 140px;
+    }
 }
