@@ -37,7 +37,7 @@ function getGuess() {
 
   if (userGuessNum < minRange || userGuessNum > maxRange) {
     var gameResponse = document.getElementById("gameResponse");
-    gameResponse.textContent = "Your number is out of range"
+    gameResponse.textContent = "Your number is out of range";
   }
 
   else if (userGuessNum == targetValue){
@@ -109,7 +109,7 @@ resetButton.onclick = resetGame;
 
 //PART 4 - enabling buttons
 
- document.getElementById("userGuess").addEventListener('keyup', function() {
+ document.getElementById("userGuess").addEventListener('input', function() {
      document.getElementById("guessButton").classList.add('enableClass');
      document.getElementById("clearButton").classList.add('enableClass');
  });
