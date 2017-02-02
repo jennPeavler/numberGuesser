@@ -14,10 +14,11 @@ function getGuess() {
   var maxRangeString = document.getElementById("maxRange").value;
   var minRange = parseInt(minRangeString);
   var maxRange = parseInt(maxRangeString);
-  alert(typeof minRange + minRange +  " " + typeof maxRange + maxRange);
+  //alert(typeof minRange + minRange +  " " + typeof maxRange + maxRange);
 
   //Generate random number within minRange < n < maxRange.  Get user guess and parse into integer.
-  var targetValue = 25; //Math.floor(Math.random()*100) +1;
+  var targetValue = 10//Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
+  //alert(targetValue);
   var userGuess = document.getElementById("userGuess").value;
   var userGuessNum = parseInt(userGuess);
   //alert(typeof userGuessNum + " " + userGuessNum);
@@ -42,6 +43,12 @@ function getGuess() {
   else if (userGuessNum == targetValue){
     var gameResponse = document.getElementById("gameResponse");
     gameResponse.textContent = "BOOM!";
+    minRange -= 10;
+    maxRange += 10;
+    document.getElementById("minRange").value = minRange;
+    document.getElementById("maxRange").value = maxRange;
+
+
   }
   else if (userGuessNum < targetValue) {
     var gameResponse = document.getElementById("gameResponse");
@@ -55,7 +62,7 @@ function getGuess() {
 
   else {
     var gameResponse = document.getElementById("gameResponse");
-    gameResponse.textContent = "Please enter a valid number";
+    gameResponse.textContent = "But you did not enter a guessing range";
   }
 }
 
@@ -81,6 +88,8 @@ clearButton.onclick = clearText;
 
 function resetGame() {
   document.getElementById("userGuess").value = '';
+  document.getElementById("minRange").value = '';
+  document.getElementById("maxRange").value = '';
   document.getElementById("lastGuessMessage").textContent = '';
   document.getElementById("userGuessValue").textContent = '';
   document.getElementById("gameResponse").textContent = '';
@@ -88,3 +97,14 @@ function resetGame() {
 
 var resetButton = document.getElementById("resetButton");
 resetButton.onclick = resetGame;
+
+
+
+//PART 4 - enabling buttons
+
+
+document.getElementById("userGuess").addEventListener('keyup', function() {
+    document.getElementById("guessButton").classList.add('enableClass');
+    document.getElementById("clearButton").classList.add('enableClass');
+
+});

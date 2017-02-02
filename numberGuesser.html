@@ -14,6 +14,10 @@
 
   <main>
     <section id="defineRange">
+      <p>Instructions</p>
+      <p>Enter a minimum and maximum value and a random number will be generated within that range</p>
+      <p>The random number will be the minimum value, the maximum value or any whole number in between.</p>
+      <p>If you guess the random number correctly, the range will automatically increase</p>
       <input type="number" id="minRange" placeholder="Enter a minimum number" />
       <input type="number" id="maxRange" placeholder="Enter a maximum number" />
     </section>
@@ -24,10 +28,10 @@
       <button id="clearButton" class="submitButtons">Clear</button>
     </section>
 
-    <section id="gameResults">
+    <section class="gameResults">
       <p id="lastGuessMessage"></p>
       <p id="userGuessValue"></p>
-      <p id="gameResponse"></p> 
+      <p id="gameResponse"></p>
     </section>
   </main>
 
