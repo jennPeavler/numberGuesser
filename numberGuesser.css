@@ -42,7 +42,7 @@ main {
   margin-right: auto;
 }
 
-#defineRange, #instructions {
+#instructions {
   font-size: 26px;
   font-weight: 300;
   color: #929497;
@@ -67,12 +67,14 @@ main {
 
 .rangeButtons {
   display: inline-block;
-  width: 150px;
-  height: 150px;
   font-weight: 300;
   font-size: 26px;
-  text-align: center;
-  border: solid 2px #ED458B;
+  width: 190px;
+  letter-spacing: 1px;
+}
+
+#minRange {
+  margin-right: 24px;
 }
 
 #userGuess {
@@ -81,7 +83,6 @@ main {
   height: 40px;
   font-size: 26px;
   font-weight: 300;
-  border: solid 2px #929497;
 }
 
 #guessButton {
@@ -104,9 +105,8 @@ main {
 
 .gameResults {
   margin-top: 90px; margin-bottom: 50px;
-  border: solid 2px #ED458B;
   height: auto;
-  min-height: 422px;
+  /*min-height: 422px;*/
   width: 416px;
   font-size: 30px;
   text-align: center;
