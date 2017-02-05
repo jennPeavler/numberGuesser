@@ -42,16 +42,16 @@ h1 {
 }
 
 .instructions {
-  font-size: 26;
+  font-size: 26px;
   font-weight: 300;
   color: #929497;
   text-align: center;
   width: 100%;
-  height: 50px;
+  height: auto;
   letter-spacing: 1px;
 }
 
-#instructionButton {
+#instruction-button {
   display: block;
   width: 100%;
   color: #FFFFFF;
@@ -64,12 +64,12 @@ h1 {
   letter-spacing: 1px;
 }
 
-.defineRange {
+.define-range {
   width: 100%;
   margin-top: 40px;
 }
 
-.rangeButtons {
+.range-buttons {
   float: left;
   font-weight: 300;
   font-size: 26px;
@@ -78,14 +78,14 @@ h1 {
   letter-spacing: 1px;
 }
 
-#minRange {
+#min-range {
   margin-right: 5%;
 }
 
-.mainGame {
+.main-game {
   width: 100%;
 }
-#userGuess {
+#user-guess {
   height: 60px;
   width: 98%;
   margin-top: 4px;
@@ -94,7 +94,7 @@ h1 {
 
 }
 
-.submitButtons {
+.submit-buttons {
   background: #D0D2D3;
   color: #FFFFFF;
   width: 48%;
@@ -107,11 +107,11 @@ h1 {
   margin-top: 20px;
 }
 
-#guessButton {
+#guess-button {
   margin-right: 3%;
 }
 
-.gameResults {
+.game-results {
   height: auto;
   width: 100%;
   padding-top: 60px;
@@ -122,22 +122,22 @@ h1 {
   line-height: 0;
 }
 
-#userGuessValue {
+#user-guess-value {
   font-size: 120px;
   color: #ED458B;
   line-height: 0;
 }
 
-#resetButton
+#reset-button
 {
   margin-top: 10px;
   width: 100%
 }
 
-#guessButton:hover,
-#clearButton:hover,
-#resetButton:hover,
-#instructionButton:hover {
+#guess-button:hover,
+#clear-button:hover,
+#reset-button:hover,
+#instruction-button:hover {
   background: #EB008B;
 }
 
@@ -149,12 +149,16 @@ h1 {
   background: #929497;
 }*/
 
-.enableClass {
+.enable-class {
   background: #929497;
 }
 
 input:focus, button:focus {
   outline: dotted 0.5px #EB008B;
+}
+
+input {
+  border: solid 1px #D0D2D3;
 }
 
 @media screen and (max-width: 1000px) {
@@ -167,8 +171,8 @@ input:focus, button:focus {
     width: 90%;
   }
 
-  .submitButtons,
-  .rangeButtons {
+  .submit-buttons,
+  .range-buttons {
       display: block;
       float: none;
       width: 100%
