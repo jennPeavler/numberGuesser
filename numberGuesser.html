@@ -2,50 +2,41 @@
 
 <head>
 <title>numberGuesser</title>
+<!-- <link rel="stylesheet" href="reset.css" /> -->
 <link rel="stylesheet" href="numberGuesser.css" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-<section id="wrapper">
-  <header>
-    <h1><span id="number">Number</span> Guesser</h1>
-  </header>
-
-  <main>
-    <section id="instructions">
-      <button id="instructionButton" aria-label="Get Instruction Button">Get Instructions</button>
-      <p id="instruction1"></p>
-      <p id="instruction2"></p>
-      <p id="instruction3"></p>
-    </section>
-
-    <section id="defineRange" aria-label="User input area">
-      <input type="number" class="rangeButtons" id="minRange" placeholder="Minimum" aria-label="input minimum range" />
-      <input type="number" class="rangeButtons" id="maxRange" placeholder="Maximum" aria-label="input maximum range"/>
-    </section>
-
-    <section id="mainGame">
-      <input type="number" id="userGuess" placeholder="Enter your guess" aria-label="input guess" />
-      <button id="guessButton" class="submitButtons">Guess</button>
-      <button id="clearButton" class="submitButtons">Clear</button>
-    </section>
-
-    <section class="gameResults" aria-label="game results">
-      <p id="lastGuessMessage"></p>
-      <p id="userGuessValue"></p>
-      <p id="gameResponse"></p>
-    </section>
-  </main>
-
-  <footer>
-    <button id="resetButton" aria-label="reset game button">Reset</button>
-
-  </footer>
-</section>
-
-<script type="text/Javascript" src="numberGuesser.js"></script>
-
+  <header><h1><span id="number">Number</span> Guesser</h1></header>
+  <section class="wrapper">
+    <main>
+      <section class="instructions">
+        <button id="instructionButton" aria-label="Get Instruction Button">Get Instructions</button>
+        <p id="instruction1"></p>
+        <p id="instruction2"></p>
+        <p id="instruction3"></p>
+      </section>
+      <section class="defineRange" aria-label="User input area">
+        <input type="number" class="rangeButtons" id="minRange" placeholder="Minimum" aria-label="input minimum range" />
+        <input type="number" class="rangeButtons" id="maxRange" placeholder="Maximum" aria-label="input maximum range"/>
+      </section>
+      <section class="mainGame">
+        <input type="number" id="userGuess" placeholder="Enter your guess" aria-label="input guess" />
+        <button id="guessButton" class="submitButtons">Guess</button>
+        <button id="clearButton" class="submitButtons">Clear</button>
+      </section>
+      <section class="gameResults" aria-label="game results">
+        <p id="lastGuessMessage"></p>
+        <p id="userGuessValue"></p>
+        <p id="gameResponse"></p>
+      </section>
+      <footer>
+        <button class="submitButtons" id="resetButton" aria-label="reset game button">Reset</button>
+      </footer>
+    </main>
+  </section>
+  <script type="text/Javascript" src="numberGuesser.js"></script>
 </body>
 </html>
