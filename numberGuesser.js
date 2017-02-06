@@ -11,14 +11,21 @@ var gameResponse = document.getElementById("game-response");
 var instruction1 = document.getElementById("instruction-1");
 var instruction2 = document.getElementById("instruction-2");
 var instruction3 = document.getElementById("instruction-3");
+var minRange;
+var maxRange;
+var targetValue;
 
-
+maxRangeString.addEventListener('input', regenerate );
+function regenerate()
+{
+  minRange = parseInt(minRangeString.value);
+  maxRange = parseInt(maxRangeString.value);
+  targetValue = Math.floor(Math.random() * (maxRange-(minRange) +1)) + (minRange);
+}
 
 guessButton.onclick = getGuess;
 function getGuess() {
-  var minRange = parseInt(minRangeString.value);
-  var maxRange = parseInt(maxRangeString.value);
-  var targetValue = Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
+
   var userGuessNum = parseInt(userGuess.value);
   lastGuessMessage.textContent = "Your last guess was";
   userGuessValue.textContent = userGuess.value;
@@ -30,8 +37,9 @@ function getGuess() {
     gameResponse.textContent = "BOOM!";
     minRange -= 10;
     maxRange += 10;
-    minRangeString = minRange;
-    maxRangeString = maxRange;
+    minRangeString.value = minRange;
+    maxRangeString.value = maxRange;
+    regenerate();
   }
   else if (userGuessNum < targetValue) {
     gameResponse.textContent = "That is too low";
@@ -63,6 +71,7 @@ function resetGame() {
   gameResponse.textContent = '';
   guessButton.classList.remove('enable-class');
   clearButton.classList.remove('enable-class');
+  regenerate();
 }
 
 userGuess.addEventListener('input', function() {
