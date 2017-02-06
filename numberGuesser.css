@@ -140,14 +140,6 @@ h1 {
   background: #EB008B;
 }
 
-/*#guessButton:disabled, #clearButton:disabled, #resetButton:disabled {
-  background: #D0D2D3;
-}*/
-
-/*#guessButton, #clearButton, #resetButton :enabled {
-  background: #929497;
-}*/
-
 .enable-class {
   background: #929497;
 }
@@ -160,11 +152,13 @@ input {
   border: solid 1px #D0D2D3;
 }
 
+
 @media screen and (max-width: 1000px) {
   h1 {
     font-size: 8vw;
   }
 }
+
 @media screen and (max-width: 800px) {
   .wrapper {
     width: 90%;

@@ -16,8 +16,7 @@ var maxRange;
 var targetValue;
 
 maxRangeString.addEventListener('input', regenerate );
-function regenerate()
-{
+function regenerate(){
   minRange = parseInt(minRangeString.value);
   maxRange = parseInt(maxRangeString.value);
   targetValue = Math.floor(Math.random() * (maxRange-(minRange) +1)) + (minRange);
